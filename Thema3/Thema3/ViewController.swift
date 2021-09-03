@@ -22,13 +22,11 @@ class ViewController: UIViewController {
         let num1 = Int(textField1.text ?? "") ?? 0
         let num2 = Int(textField2.text ?? "") ?? 0
         // 表示
-        let num3 = plusMinusSwitch1.isOn ? -num1 : num1
-        let num4 = plusMinusSwitch2.isOn ? -num2 : num2
-        label1.text = String(num3)
-        label2.text = String(num4)
+        let signedNum1 = plusMinusSwitch1.isOn ? -num1 : num1
+        let signedNum2 = plusMinusSwitch2.isOn ? -num2 : num2
+        label1.text = String(signedNum1)
+        label2.text = String(signedNum2)
         // 計算
-        let resultText:String
-        resultText = String(num3 + num4)
-        sumLabel.text = resultText
+        sumLabel.text = String(signedNum1 + signedNum2)
     }
 }
